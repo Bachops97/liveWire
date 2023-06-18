@@ -1,0 +1,139 @@
+$bg_color                :transparent;
+$bg_active_color         : $primary_color;
+$link_color              : $primary_color;
+$link_active_color       :white;
+$border_color            : rgba(0, 0, 0, 0.11);
+$border_active_color     : $primary_color;
+$border_radius_if_arrows :0px;
+$border_radius           :50%;
+$arrow_size              : 0px;
+
+//Display flex not block
+$display_arrows :none;
+
+$spacing :20px;
+//not in %
+$width   :50px;
+
+$height         :50px;
+$link_font_size : 15px;
+
+.pagination {
+    display     : flex;
+    padding-left: 0;
+    list-style  : none;
+
+    li {
+        margin-right: $spacing !important;
+    }
+}
+
+.page-link {
+    font-size       : $link_font_size;
+    border-radius   : $border_radius !important;
+    margin-left     : unset;
+    position        : relative;
+    display         : block;
+    color           : $link_color !important;
+    text-decoration : none;
+    background-color: $bg_color;
+    border          : 1px solid $border_color !important;
+    transition      : color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+        border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .page-link {
+        transition: none;
+    }
+}
+
+.page-link:hover {
+    z-index         : 2;
+    color           : $link_active_color !important;
+    background-color: $bg_active_color !important;
+    border-color    : $border_active_color !important;
+}
+
+.page-link:focus {
+    z-index         : 3;
+    color           : $link_active_color !important;
+    background-color: $bg_active_color !important;
+    outline         : 0;
+    box-shadow      : 0 0 0 0.25rem $border_active_color;
+}
+
+.page-item:not(:first-child) .page-link {
+    margin-left: -1px;
+}
+
+.page-item.active .page-link {
+    z-index         : 3;
+    color           : $link_active_color !important;
+    background-color: $bg_active_color !important;
+    border-color    : $border_active_color !important;
+}
+
+.page-item.disabled .page-link {
+    color           : #6c757d;
+    pointer-events  : none;
+    background-color: #fff;
+    border-color    : #dee2e6;
+}
+
+.page-link {
+    padding        : unset;
+    width          : $width !important;
+    height         : $height !important;
+    display        : flex !important;
+    justify-content: center !important;
+    align-items    : center !important;
+}
+
+.page-item:first-child .page-link {
+    border-top-left-radius   : $border_radius_if_arrows !important;
+    border-bottom-left-radius: $border_radius_if_arrows !important;
+    display                  : $display_arrows !important;
+    justify-content          : center !important;
+    align-items              : center !important;
+    font-size                : $arrow_size !important;
+}
+
+.page-item:last-child .page-link {
+    border-top-right-radius   : $border_radius_if_arrows !important;
+    border-bottom-right-radius: $border_radius_if_arrows !important;
+    display                   : $display_arrows !important;
+    justify-content           : center !important;
+    align-items               : center !important;
+    font-size                 : $arrow_size !important;
+}
+
+.pagination-lg .page-link {
+
+    font-size: 1.25rem;
+}
+
+.pagination-lg .page-item:first-child .page-link {
+    border-top-left-radius   : $border_radius_if_arrows !important;
+    border-bottom-left-radius: $border_radius_if_arrows !important;
+}
+
+.pagination-lg .page-item:last-child .page-link {
+    border-top-right-radius   : $border_radius_if_arrows !important;
+    border-bottom-right-radius: $border_radius_if_arrows !important;
+}
+
+.pagination-sm .page-link {
+
+    font-size: 0.875rem;
+}
+
+.pagination-sm .page-item:first-child .page-link {
+    border-top-left-radius   : $border_radius_if_arrows !important;
+    border-bottom-left-radius: $border_radius_if_arrows !important;
+}
+
+.pagination-sm .page-item:last-child .page-link {
+    border-top-right-radius   : $border_radius_if_arrows !important;
+    border-bottom-right-radius: $border_radius_if_arrows !important;
+}

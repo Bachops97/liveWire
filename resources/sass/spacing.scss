@@ -1,0 +1,34 @@
+.content-fluid {
+    width        : 100%;
+    padding-right: 15px;
+    padding-left : 15px;
+}
+
+
+@media (min-width: 576px) {
+    .content-fluid {
+        padding-right: 15px;
+        padding-left : 15px;
+    }
+}
+
+@media (min-width: 768px) {
+    .content-fluid {
+        padding-right: 15px;
+        padding-left : 15px;
+    }
+}
+
+@media (min-width: 992px) {
+    .content-fluid {
+        padding-right: 30px;
+        padding-left : 30px;
+    }
+}
+
+@media (min-width: 1300px) {
+    .content-fluid {
+        padding-right: 40px !important;
+        padding-left : 40px !important;
+    }
+}
